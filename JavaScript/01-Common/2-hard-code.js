@@ -2,7 +2,7 @@
 
 const fs = require('fs').promises;
 
-// Antipattern
+// Antipattern: Hard code
 (async () => {
   const data = await fs.readFile('./2-hard-code.js', 'utf8');
   const lines = data.split('\n');

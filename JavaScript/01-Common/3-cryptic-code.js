@@ -1,5 +1,7 @@
 'use strict';
 
+// Antipattern: Cryptic code
+
 const emitter = (l, o) => (l = {}, o = {
   on: (n, f) => (l[n] = l[n] || []).push(f),
   emit: (n, ...d) => (l[n] || []).map(f => f(...d)),

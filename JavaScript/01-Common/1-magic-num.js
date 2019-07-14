@@ -1,6 +1,6 @@
 'use strict';
 
-// Antipattern
+// Antipattern: Magic number
 {
   const name = 'Marcus Aurelius';
   const result = name.padStart(17);
@@ -31,7 +31,7 @@
   console.log(result);
 }
 
-// Antipattern
+// Antipattern: : Magic string
 {
   const pos = '\x1b[2;10H';
   console.log(pos);
