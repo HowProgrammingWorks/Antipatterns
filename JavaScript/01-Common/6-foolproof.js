@@ -4,11 +4,17 @@
 // Assumption: idiots will pass anything to my function
 {
   const max = (...args) => {
-    if (args.length !== 2) throw new Error('Function expects two aruments');
+    if (args.length !== 2) {
+      throw new Error('Function expects two aruments');
+    }
     const a = args.shift();
-    if (typeof a !== 'number') throw new Error('Unexpected type of first arument');
+    if (typeof a !== 'number') {
+      throw new Error('Unexpected type of first arument');
+    }
     const b = args.shift();
-    if (typeof b !== 'number') throw new Error('Unexpected type of second arument');
+    if (typeof b !== 'number') {
+      throw new Error('Unexpected type of second arument');
+    }
     return a > b ? a : b;
   };
 
@@ -22,7 +28,7 @@
 
   // Usage 3
   const x = {
-    [Symbol.toPrimitive](hint) {
+    [Symbol.toPrimitive]() {
       return 10;
     }
   };
@@ -32,7 +38,7 @@
 
 // Solution
 {
-  const max = (a, b) => a > b ? a : b;
+  const max = (a, b) => (a > b ? a : b);
 
   // Usage 1
   console.log(`Max of 10 and 20 is ${max(10, 20)}`);
