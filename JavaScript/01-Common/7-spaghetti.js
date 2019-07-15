@@ -5,8 +5,38 @@
 // - Callbacks
 // - Events
 
+// Callbacks
+{
+  const invoke = (validate, fn, a, b, callback) => {
+    const result = fn(validate, a, b);
+    callback(null, result);
+  };
+
+  const max = (validate, a, b) => {
+    let valid = true;
+    const conjunction = (err, res) => {
+      valid = valid && res;
+    };
+    validate(a, conjunction);
+    validate(b, conjunction);
+
+    if (!valid) throw new TypeError('Unexpected parameter');
+
+    return Math.max(a, b);
+  };
+
+  const isNumber = (value, callback) => {
+    const valid = typeof value === 'number';
+    callback(null, valid);
+  };
+
+  invoke(isNumber, max, 10, 20, (err, result) => {
+    console.dir({ result });
+  });
+}
+
 // Events
-// Try to dibig this code to find logical error
+// Try to debug this code to find logical error
 {
   const { EventEmitter } = require('events');
 
