@@ -62,7 +62,7 @@
     if (typeof data === 'string') {
       controller.emit('call', data);
     } else {
-      controller.emit('parametre', data);
+      controller.emit('parameter', data);
     }
   });
 
