@@ -38,7 +38,7 @@
   console.dir({ callMarcus });
 }
 
-// Antipattern: Hidden nested loops
+// Antipattern: Hidden loops
 {
   const persons = [
     { name: 'Marcus', phone: '12345678', city: 'Roma' },
