@@ -4,30 +4,30 @@
 {
   const color = name => {
     switch (name) {
-      case 'black':
-        console.log(1);
-        break;
-      case 'red':
-        console.log(2);
-        break;
-      case 'green':
-        console.log(3);
-        break;
-      case 'yellow':
-        console.log(4);
-        break;
-      case 'blue':
-        console.log(5);
-        break;
-      case 'magenta':
-        console.log(6);
-        break;
-      case 'cyan':
-        console.log(7);
-        break;
-      case 'white':
-        console.log(8);
-        break;
+    case 'black':
+      console.log(1);
+      break;
+    case 'red':
+      console.log(2);
+      break;
+    case 'green':
+      console.log(3);
+      break;
+    case 'yellow':
+      console.log(4);
+      break;
+    case 'blue':
+      console.log(5);
+      break;
+    case 'magenta':
+      console.log(6);
+      break;
+    case 'cyan':
+      console.log(7);
+      break;
+    case 'white':
+      console.log(8);
+      break;
     }
     console.log('color name:', name);
   };
@@ -39,14 +39,14 @@
 {
   const color = name => {
     switch (name) {
-      case 'black': return 1;
-      case 'red': return 2;
-      case 'green': return 3;
-      case 'yellow': return 4;
-      case 'blue': return 5;
-      case 'magenta': return 6;
-      case 'cyan': return 7;
-      case 'white': return 8;
+    case 'black': return 1;
+    case 'red': return 2;
+    case 'green': return 3;
+    case 'yellow': return 4;
+    case 'blue': return 5;
+    case 'magenta': return 6;
+    case 'cyan': return 7;
+    case 'white': return 8;
     }
   };
 
