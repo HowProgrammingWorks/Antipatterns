@@ -4,18 +4,17 @@
     "es6": true,
     "node": true
   },
-  "globals": {
-    "memory": true
-  },
   "extends": "eslint:recommended",
   "parserOptions": {
-    "ecmaVersion": 2018
+    "ecmaVersion": 2020
+  },
+  "globals": {
+    "BigInt": true
   },
   "rules": {
     "indent": [
       "error",
-      2,
-      { "SwitchCase": 1 }
+      2
     ],
     "linebreak-style": [
       "error",
@@ -115,6 +114,9 @@
       }
     ],
     "new-parens": [
+      "error"
+    ],
+    "no-lonely-if": [
       "error"
     ],
     "no-trailing-spaces": [
