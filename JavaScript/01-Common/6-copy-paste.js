@@ -18,7 +18,7 @@
 
 // Patch built-in class
 {
-  Array.prototype.first = function () {
+  Array.prototype.first = function() {
     return this[0];
   };
 }

@@ -4,6 +4,7 @@
 // - JMP, GOTO
 // - Callbacks
 // - Events
+// - Promises
 
 // Callbacks
 {

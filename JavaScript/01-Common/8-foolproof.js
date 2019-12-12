@@ -1,6 +1,6 @@
 'use strict';
 
-// Antipattern: Fool proof code
+// Antipattern: Fool-proof code
 // Assumption: idiots will pass anything to my function
 {
   const max = (...args) => {
