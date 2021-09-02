@@ -39,6 +39,6 @@ exports.handler = (event, context, callback) => {
 
 // The essence
 
-async id => await application.database
+async (id) => await application.database
   .select('users')
   .where({ id });

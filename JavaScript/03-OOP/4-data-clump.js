@@ -14,13 +14,13 @@ const areas = {
   62: 'Donetsk',
 };
 
-const getCountryCode = name => Object
+const getCountryCode = (name) => Object
   .keys(countries)
-  .find(key => countries[key] === name);
+  .find((key) => countries[key] === name);
 
-const getAreaCode = name => Object
+const getAreaCode = (name) => Object
   .keys(areas)
-  .find(key => areas[key] === name);
+  .find((key) => areas[key] === name);
 
 const prepareCommand = (country, area, number) => {
   const countryCode = getCountryCode(country);

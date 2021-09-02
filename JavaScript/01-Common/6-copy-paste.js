@@ -25,5 +25,5 @@
 
 // Another solution
 {
-  array.find(e => !!e);
+  array.find((e) => !!e);
 }

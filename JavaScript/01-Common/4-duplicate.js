@@ -8,7 +8,7 @@ const fs = { watch, readFile, readdir };
 {
   const cache = new Map();
 
-  const watchFolder = path => {
+  const watchFolder = (path) => {
     fs.watch(path, async (event, file) => {
       try {
         const data = await fs.readFile(file, 'utf8');
@@ -19,7 +19,7 @@ const fs = { watch, readFile, readdir };
     });
   };
 
-  const cacheFolder = async path => {
+  const cacheFolder = async (path) => {
     watchFolder(path);
     const files = await fs.readdir(path);
     for (const file of files) {
@@ -39,7 +39,7 @@ const fs = { watch, readFile, readdir };
 {
   const cache = new Map();
 
-  const cacheFile = async file => {
+  const cacheFile = async (file) => {
     try {
       const data = await fs.readFile(file, 'utf8');
       cache.set(file, data);
@@ -48,13 +48,13 @@ const fs = { watch, readFile, readdir };
     }
   };
 
-  const watchFolder = path => {
+  const watchFolder = (path) => {
     fs.watch(path, (event, file) => {
       cacheFile(file);
     });
   };
 
-  const cacheFolder = async path => {
+  const cacheFolder = async (path) => {
     watchFolder(path);
     const files = await fs.readdir(path);
     for (const file of files) cacheFile(file);

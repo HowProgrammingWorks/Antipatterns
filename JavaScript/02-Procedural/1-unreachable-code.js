@@ -3,7 +3,7 @@
 // Antipattern: Unreachable code
 // linter detectable
 {
-  const isValid = name => {
+  const isValid = (name) => {
     return true;
     // everything after return is unreachable
     if (name.includes(' ')) return false;
@@ -15,7 +15,7 @@
 // Antipattern: Unreachable code
 // run-time or analytic
 {
-  const isValid = name => {
+  const isValid = (name) => {
     if (!name) return false;
     if (name.length === 0) return false;
     if (name.includes(' ')) return false;

@@ -2,7 +2,7 @@
 
 // Antipattern: switch
 {
-  const color = name => {
+  const color = (name) => {
     switch (name) {
     case 'black':
       console.log(1);
@@ -37,7 +37,7 @@
 
 // Better switch ussage
 {
-  const color = name => {
+  const color = (name) => {
     switch (name) {
     case 'black': return 1;
     case 'red': return 2;
@@ -65,7 +65,7 @@
     /* 7 */ 'cyan',
     /* 8 */ 'white',
   ];
-  const color = name => COLORS.indexOf(name) + 1;
+  const color = (name) => COLORS.indexOf(name) + 1;
 
   console.log('white', color('white'));
 }
@@ -82,7 +82,7 @@
     cyan: 7,
     white: 8,
   };
-  const color = name => COLORS[name];
+  const color = (name) => COLORS[name];
 
   console.log('white', color('white'));
 }
@@ -99,7 +99,7 @@
     ['cyan', 7],
     ['white', 8],
   ]);
-  const color = name => COLORS.get(name);
+  const color = (name) => COLORS.get(name);
 
   console.log('white', color('white'));
 }

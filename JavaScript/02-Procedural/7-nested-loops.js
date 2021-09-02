@@ -18,7 +18,7 @@
     { name: 'Kaliningrad', prefix: '+7401' },
   ];
 
-  const getPhoneNumber = name => {
+  const getPhoneNumber = (name) => {
     for (const record1 of phones) {
       if (record1.name === name) {
         for (const record2 of cities) {
@@ -50,8 +50,8 @@
     Kaliningrad: '+7401',
   };
 
-  const getPhoneNumber = name => {
-    const person = persons.find(person => person.name === name);
+  const getPhoneNumber = (name) => {
+    const person = persons.find((person) => person.name === name);
     const { phone, city } = person;
     const prefix = prefixes[city];
     return prefix + phone;
@@ -73,7 +73,7 @@
     Kaliningrad: '+7401',
   };
 
-  const getPhoneNumber = name => {
+  const getPhoneNumber = (name) => {
     const person = persons[name];
     const { phone, city } = person;
     const prefix = prefixes[city];

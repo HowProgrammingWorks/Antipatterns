@@ -4,7 +4,7 @@ const fs = require('fs');
 
 // Antipattern: Long method, function, or procedure
 
-const processCities = data => {
+const processCities = (data) => {
   const lines = data.split('\n');
   lines.pop();
   const table = [];

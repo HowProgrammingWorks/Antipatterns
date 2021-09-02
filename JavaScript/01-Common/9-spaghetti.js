@@ -47,7 +47,7 @@
 
   const parameters = [];
 
-  incoming.on('return', result => {
+  incoming.on('return', (result) => {
     console.dir({ result });
   });
 
@@ -55,11 +55,11 @@
     incoming.emit('return', Math.max(a, b));
   });
 
-  controller.on('parameter', value => {
+  controller.on('parameter', (value) => {
     parameters.push(value);
   });
 
-  incoming.on('input', data => {
+  incoming.on('input', (data) => {
     if (typeof data === 'string') {
       controller.emit('call', data);
     } else {
@@ -67,7 +67,7 @@
     }
   });
 
-  controller.on('call', name => {
+  controller.on('call', (name) => {
     processing.emit(name, ...parameters);
   });
 

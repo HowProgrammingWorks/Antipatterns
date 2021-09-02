@@ -15,7 +15,7 @@ class Controller {
 
   parseCookies(cookie) {
     const cookies = {};
-    if (cookie) cookie.split(';').forEach(item => {
+    if (cookie) cookie.split(';').forEach((item) => {
       const parts = item.split('=');
       cookies[(parts[0]).trim()] = (parts[1] || '').trim();
     });
@@ -68,7 +68,7 @@ class Controller {
 
   postPerson(req, res) {
     const body = [];
-    req.on('data', chunk => {
+    req.on('data', (chunk) => {
       body.push(chunk);
     }).on('end', () => {
       let data = Buffer.concat(body).toString();
@@ -76,7 +76,7 @@ class Controller {
       if (obj.name) obj.name = obj.name.trim();
       data = JSON.stringify(obj);
       this.cache[req.url] = data;
-      fs.writeFile('./person.json', data, err => {
+      fs.writeFile('./person.json', data, (err) => {
         if (!err) {
           res.writeHead(200);
           res.end('File saved');

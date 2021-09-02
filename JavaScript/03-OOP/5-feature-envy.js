@@ -23,11 +23,11 @@ class Phone {
   }
 
   static getCountryCode(name) {
-    return Object.keys(countries).find(key => countries[key] === name);
+    return Object.keys(countries).find((key) => countries[key] === name);
   }
 
   static getAreaCode(name) {
-    return Object.keys(areas).find(key => areas[key] === name);
+    return Object.keys(areas).find((key) => areas[key] === name);
   }
 }
 

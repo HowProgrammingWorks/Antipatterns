@@ -53,7 +53,7 @@
 
 // Exception
 {
-  const last = array => array[array.length - 1];
+  const last = (array) => array[array.length - 1];
   const array = ['A', 'B', 'C'];
   console.log(last(array));
 }

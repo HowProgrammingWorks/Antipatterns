@@ -55,7 +55,7 @@
     return `${name} [${dynasty}] from ${city} (${date}) ${school} school`;
   };
 
-  const registerPerson = person => {
+  const registerPerson = (person) => {
     const valid = validatePerson(person);
     if (!valid) throw new Error('Emperor is invalid');
     const data = serializePerson(person);
