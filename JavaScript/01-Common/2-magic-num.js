@@ -27,7 +27,7 @@
 {
   const config = require('./config.js');
   const name = 'Marcus Aurelius';
-  const result = name.padStart(config.name.lenght);
+  const result = name.padStart(config.name.length);
   console.log(result);
 }
 
