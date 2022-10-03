@@ -39,7 +39,7 @@
 // Events
 // Try to debug this code to find logical error
 {
-  const { EventEmitter } = require('events');
+  const { EventEmitter } = require('node:events');
 
   const incoming = new EventEmitter();
   const controller = new EventEmitter();

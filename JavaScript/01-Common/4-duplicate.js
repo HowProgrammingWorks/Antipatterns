@@ -1,6 +1,6 @@
 'use strict';
 
-const { promises, watch } = require('fs');
+const { promises, watch } = require('node:fs');
 const { readFile, readdir } = promises;
 const fs = { watch, readFile, readdir };
 

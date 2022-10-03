@@ -1,6 +1,6 @@
 'use strict';
 
-const fs = require('fs').promises;
+const fs = require('node:fs').promises;
 
 // Antipattern: Hard code
 (async () => {
