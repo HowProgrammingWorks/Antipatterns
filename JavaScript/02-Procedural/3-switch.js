@@ -35,7 +35,7 @@
   color('white');
 }
 
-// Better switch ussage
+// Better switch usage
 {
   const color = (name) => {
     switch (name) {
